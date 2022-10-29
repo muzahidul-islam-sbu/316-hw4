@@ -79,6 +79,7 @@ function AuthContextProvider(props) {
                 }
             })
             history.push("/login");
+            auth.loginUser(email, password);
         }
     }
 

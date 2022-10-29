@@ -7,6 +7,8 @@ import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab'
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box';
+
 /*
     This React component lists all the top5 lists in the UI.
     
@@ -37,9 +39,12 @@ const HomeScreen = () => {
             }
             </List>;
     }
+    // id="playlist-selector"
+    // id="list-selector-heading"
+    // id = #list-selector-list
     return (
-        <div id="playlist-selector">
-            <div id="list-selector-heading">
+        <Box>
+            <Box sx={{textAlign:'center', alignItems:'center', justifyContent:'center', display:'flex'}}>    
             <Fab 
                 color="primary" 
                 aria-label="add"
@@ -49,14 +54,14 @@ const HomeScreen = () => {
                 <AddIcon />
             </Fab>
                 <Typography variant="h2">Your Lists</Typography>
-            </div>
-            <div id="list-selector-list">
+            </Box>
+            <Box>
                 {
                     listCard
                 }
                 <MUIDeleteModal />
-            </div>
-        </div>)
+            </Box>
+        </Box>)
 }
 
 export default HomeScreen;
