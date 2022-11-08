@@ -10,9 +10,6 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
     p: 4,
 };
 
@@ -39,16 +36,17 @@ export default function MUIDeleteModal() {
                     Delete the {name} Top 5 List?
                 </header>
                 <div id="confirm-cancel-container">
-                    <button
-                        id="dialog-yes-button"
-                        className="modal-button"
-                        onClick={handleDeleteList}
-                    >Confirm</button>
-                    <button
-                        id="dialog-no-button"
-                        className="modal-button"
-                        onClick={handleCloseModal}
-                    >Cancel</button>
+                    <input type="button" 
+                        id="remove-song-confirm-button" 
+                        className="modal-button" 
+                        onClick={handleDeleteList} 
+                        value='Confirm' />
+                    <input 
+                        type="button" 
+                        id="remove-song-cancel-button" 
+                        className="modal-button" 
+                        onClick={handleCloseModal} 
+                        value='Cancel' />
                 </div>
             </div>
             </Box>

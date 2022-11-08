@@ -13,7 +13,7 @@ function Statusbar() {
     if (store.currentList)
         text = store.currentList.name;
     return (
-        <div id="playlister-statusbar">
+        <div id="playlister-statusbar" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <Typography variant="h4">{text}</Typography>
         </div>
     );
