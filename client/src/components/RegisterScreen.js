@@ -12,6 +12,7 @@ import Link from '@mui/material/Link';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import MUIAccountErrorModal from './MUIAccountErrorModal';
 
 export default function RegisterScreen() {
     const { auth } = useContext(AuthContext);
@@ -109,6 +110,8 @@ export default function RegisterScreen() {
                         >
                             Sign Up
                         </Button>
+                    <MUIAccountErrorModal />
+
                         <Grid container justifyContent="flex-end">
                             <Grid item>
                                 <Link href="/login/" variant="body2">
@@ -116,6 +119,7 @@ export default function RegisterScreen() {
                                 </Link>
                             </Grid>
                         </Grid>
+
                     </Box>
                 </Box>
                 <Copyright sx={{ mt: 5 }} />
